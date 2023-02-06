@@ -14,7 +14,7 @@
         let mainParagraph = document.createElement("p")
         mainParagraph.setAttribute("id", "MainParagraph")
 
-        let firstString = "This is a main paragraph that we added through javascript"
+        let firstString = "This is a main paragraph that we added through javascript and Ben Was Here :)"
 
         mainParagraph.textContent = firstString
 
