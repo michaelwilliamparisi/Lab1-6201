@@ -1,3 +1,8 @@
+/**
+ * @michaelwilliamparisi
+ * @Date: February 12, 2023
+ * @description: This page provides the functionality for the services page. 
+ */
 (function (){
     function displayText() {
         document.getElementById("p1").innerHTML = "We are able to consult in web design and functionality. </br> We will design and impliment a web page for free.";
