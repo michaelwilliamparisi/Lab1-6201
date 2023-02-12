@@ -3,7 +3,7 @@
     function DisplayButton(){
         let randomButton = document.getElementById("randomButton")
         randomButton.addEventListener("click", function(){
-            location.href ="./projects.html"
+            location.href ="./services.html"
         })
 
         let mainContent = document.getElementsByTagName("home")[0]
@@ -31,7 +31,7 @@
             case "Home - WEBD6201 Demo":
                 DisplayButton()
                 break
-            case "Projects - Demo":
+            case "Services Page":
                 DisplayButton()
                 break
         }
