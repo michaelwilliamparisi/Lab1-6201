@@ -12,7 +12,7 @@
     <script src="https://kit.fontawesome.com/806c96d0b0.js" crossorigin="anonymous"></script>
 </head>
 
-<body >
+<body class="body-style">
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="./index.html"><i class="fa-solid fa-hippo"></i></a>
@@ -41,20 +41,43 @@
     </div>
   </nav>
 
-  <header class="container mt-5" onfocus="divDisplayImg()">
+  <header class="container mt-5">
     <link rel="stylesheet" href="CSS/style.css">
-    <h1 id="welcome" ><i class="fa-brands fa-ups"></i> Services <h2 id="displayEvent" class="border"></h2></h1>
+    <h1 id="welcome" ><i class="fa-sharp fa-solid fa-bell-concierge"></i> Services <h2 id="displayEvent" class="border"></h2></h1>
 
-    <h2 class="container">This is where we will display our services</h2>
+    <h2 id="head1" class="container">This is where we will display our services</h2>
 
 
   </header>
 
+
+  <main>
+    <div class="row">
+      <div class="column">
+        <h2 id="picTitle" class="container"></h2>
+        <img class="small-image" src="./images/webdesign.jpg" alt="trump in field"  >
+        <p id="p1" class="container"></p>
+      </div>
+      <div class="column">
+        <h2 id="moo1" class="container"></h2>
+        <img class="small-image" src="./images/testing.jpg" alt="Moo" >
+        <p id="p2"></p>
+      </div>
+      <div class="column">
+        <h2 id="trump1" class="container"></h2>
+        <img class="small-image" src="./images/IT-Support.jpg" alt="It Support" >
+        <p id="p3"></p>
+      </div>
+    </div>
+
+  </main>
+  
   
 
-  <div id="myDiv">
-    This is to display the image area!
-  </div>
+  
+  
+
+  
   
 
 
@@ -69,5 +92,17 @@
   <script src="./scripts/services.js"></script>
   <script src="./scripts/main.js"></script>
 </body>
+
+<!-- <footer>
+  <div class="card">
+    <div class="card">
+      <h5 class="card-header">Featured</h5>
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+</footer> -->
 
 </html>
