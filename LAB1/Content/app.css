@@ -108,3 +108,24 @@ header img {
   border: none;
   cursor: pointer;
 }
+
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.small-image {
+  width: 350px;
+  height: 200px;
+  object-fit: contain;
+  
+}

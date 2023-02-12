@@ -6,7 +6,7 @@
             location.href ="./services.html"
         })
 
-        let mainContent = document.getElementsByTagName("main")[0]
+        let mainContent = document.getElementsByTagName("home")[0]
         mainContent.setAttribute("class", "container")
 
         console.log(mainContent)
