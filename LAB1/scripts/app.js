@@ -28,10 +28,12 @@ function changeProductsToProjects(linkId, newHref) {
     let navbarLinks = document.querySelector("#navbarNav ul");
     navbarLinks.insertBefore(newListItem, navbarLinks.children[4]);
     }
-    
-    let textContainer = document.querySelector("#HomeP");
-    let text = "This is the Home Page for Michael and Ben's Lab 1"
-    textContainer.textContent = text;
+    function addTextForHome()
+    {
+        let textContainer = document.querySelector("#HomeP");
+        let text = "This is the Home Page for Michael and Ben's Lab 1"
+        textContainer.textContent = text;
+    }
 
     // Function to add a fixed bottom Navbar
 function addBottomNavbar() {
@@ -72,10 +74,11 @@ function addBottomNavbar() {
     
     // Document Ready Event
     document.addEventListener("DOMContentLoaded", function() {
-    
+    addTextForHome();
     changeProductsToProjects("products-link", "./projects.html");
     addHumanResourcesLink();
     addBottomNavbar();
+    
     // Add event listener for the form submit
     document.querySelector("#contact-form").addEventListener("submit", handleFormSubmit);
     });

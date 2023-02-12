@@ -1,13 +1,21 @@
 body {
-    background-color: black;
-    background-image: url(../images/pexels-philippe-donn-1169754.jpg);
-    background-size: cover;
+   
     background-repeat: no-repeat;
     color: white;
     display: flex;
     flex-direction: column;
     height: 100vh;
   }
+
+.background-image
+{
+    background-color: black;
+    background-image: url(../images/pexels-philippe-donn-1169754.jpg);
+    background-size: cover;
+}
+
+
+
   nav {
     background-color: lightgray;
     height: 50px;
@@ -107,4 +115,10 @@ body {
     border-radius: 5px;
     border: none;
     cursor: pointer;
+  }
+  .small-image {
+    width: 350px;
+    height: 200px;
+    object-fit: contain;
+    
   }
