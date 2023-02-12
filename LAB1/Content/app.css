@@ -129,3 +129,14 @@ header img {
   object-fit: contain;
   
 }
+
+.center-text {
+  text-align: center;
+  font-size: medium;
+}
+
+.center-button {
+  margin: 0;
+  position: absolute;
+  top: 40%;
+}
