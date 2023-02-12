@@ -1,3 +1,8 @@
+/**
+ * @michaelwilliamparisi
+ * @Date: February 12, 2023
+ * @description: This page was used as a reference for all other .js files. 
+ */
 (function () {
     
     function DisplayButton(){
@@ -32,6 +37,9 @@
                 DisplayButton()
                 break
             case "Services Page":
+                DisplayButton()
+                break
+            case "ContactUs - Demo":
                 DisplayButton()
                 break
         }
