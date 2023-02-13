@@ -162,13 +162,16 @@ function changeProductsToProjects(linkId, newHref) {
     document.addEventListener("DOMContentLoaded", function() {
         
         changeProductsToProjects("products-link", "./projects.html");
-        addHumanResourcesLink();    
+         
         
         
         
     
     
     });
+    document.addEventListener("DOMContentLoaded", function() {
+        addHumanResourcesLink();
+    });   
     document.addEventListener("DOMContentLoaded", function() {
         let bottomNav = createBottomNavBar();
         document.body.appendChild(bottomNav);
