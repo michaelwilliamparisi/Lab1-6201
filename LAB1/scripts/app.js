@@ -4,106 +4,128 @@
 
 // Function to change the text of the Products link to Projects
 function changeProductsToProjects(linkId, newHref) {
+    // Select the link with the specified linkId
     let link = document.querySelector(`#${linkId}`);
-    link.href = newHref;
-    //document.querySelector("#Projects").textContent = "Projects";
-  }
-  
-  // Function to add a new link to the Navbar
-  function addHumanResourcesLink() {
-    let navLinks = document.querySelectorAll(".navbar-nav li");
-      let contactLink = navLinks[navLinks.length - 2];
-      
-      let hr = document.createElement("li");
-      hr.classList.add("nav-item");
-      
-      let hrLink = document.createElement("a");
-      hrLink.classList.add("nav-link");
-      hrLink.innerHTML = '<i class="fa-solid fa-people-carry"></i>Human Resources';
-      hr.appendChild(hrLink);
-      
-      contactLink.after(hr);
-    }
-    function setProjectText() {
-        document.querySelector("#p1").textContent = "Project 1";
-        document.querySelector("#p1-desc").textContent = "This first project is based on a code camp project where you have to create a rpg user interface using JavaScript!";
-      
-        document.querySelector("#p2").textContent = "Project 2";
-        document.querySelector("#p2-desc").textContent = "This second project is based around making a flappy bird like game using scratch.";
-      
-        document.querySelector("#p3").textContent = "Project 3";
-        document.querySelector("#p3-desc").textContent = "Finally the third project is the website you're currently viewing on this page. Here is Michael doing his part working diligently.";
-      }
-    function addTextForHome()
-    {
-        let textContainer1 = document.querySelector("#Welcome");
-        let text1 = "Welcome to our Website!"
-        textContainer1.textContent = text1; 
-        let textContainer2 = document.querySelector("#HomeP");
-        let text2 = "This is the Home Page for Michael and Ben's Lab 1"
-        textContainer2.textContent = text2;
 
-        
-    }
-    
+    // Update the href attribute of the link to the specified newHref
+    link.href = newHref;
+}
+
+// Function to add a new link to the Navbar
+function addHumanResourcesLink() {
+    // Select all of the links in the navbar
+    let navLinks = document.querySelectorAll(".navbar-nav li");
+
+    // Get the second to last link in the navbar
+    let contactLink = navLinks[navLinks.length - 2];
+
+    // Create a new list item for the Human Resources link
+    let hr = document.createElement("li");
+    hr.classList.add("nav-item");
+
+    // Create the Human Resources link
+    let hrLink = document.createElement("a");
+    hrLink.classList.add("nav-link");
+    hrLink.innerHTML = '<i class="fa-solid fa-people-carry"></i>Human Resources';
+    hr.appendChild(hrLink);
+
+    // Insert the Human Resources link after the Contact link
+    contactLink.after(hr);
+}
+
+// Function to set the text for each of the projects
+function setProjectText() {
+    // Set the text for project 1
+    document.querySelector("#p1").textContent = "Project 1";
+    document.querySelector("#p1-desc").textContent = "This first project is based on a code camp project where you have to create a rpg user interface using JavaScript!";
+
+    // Set the text for project 2
+    document.querySelector("#p2").textContent = "Project 2";
+    document.querySelector("#p2-desc").textContent = "This second project is based around making a flappy bird like game using scratch.";
+
+    // Set the text for project 3
+    document.querySelector("#p3").textContent = "Project 3";
+    document.querySelector("#p3-desc").textContent = "Finally the third project is the website you're currently viewing on this page. Here is Michael doing his part working diligently.";
+}
+
+// Function to add text for the Home page
+function addTextForHome() {
+    // Get the container for the first text
+    let textContainer1 = document.querySelector("#Welcome");
+
+    // Set the first text
+    let text1 = "Welcome to our Website!"
+    textContainer1.textContent = text1; 
+
+    // Get the container for the second text
+    let textContainer2 = document.querySelector("#HomeP");
+
+    // Set the second text
+    let text2 = "This is the Home Page for Michael and Ben's Lab 1"
+    textContainer2.textContent = text2;
+}
    
+    
     // Function to create a bottom navigation bar
-    function createBottomNavBar() {
+function createBottomNavBar() {
+        // Creating a nav element and adding classes to it
         let nav = document.createElement("nav");
         nav.classList.add("navbar", "navbar-expand-lg", "bg-light", "fixed-bottom");
-
+    
+        // Creating a container div and adding classes to it
         let container = document.createElement("div");
         container.classList.add("container-fluid");
         nav.appendChild(container);
-
+    
+        // Creating a copyright div and adding text to it
         let copyright = document.createElement("div");
         copyright.classList.add("copyright");
         copyright.innerHTML = "Copyright &copy; " + new Date().getFullYear() + " Ben Walsh and Michael Parisi";
         container.appendChild(copyright);
-
+    
+        // Creating a brand element and adding classes to it
         let brand = document.createElement("a");
         brand.classList.add("navbar-brand", "d-flex", "justify-content-end");
         brand.href = "./index.html";
         brand.innerHTML = '<i class="fa-solid fa-hippo"></i>';
         container.appendChild(brand);
-
+    
+        // Creating a unordered list element and adding classes to it
         let navList = document.createElement("ul");
         navList.classList.add("navbar-nav", "ml-auto");
         container.appendChild(navList);
-
-      
+    
+        // Creating a list item element and adding classes to it
         let home = document.createElement("li");
         home.classList.add("nav-item");
         navList.appendChild(home);
-      
+    
+        // Creating a link element and adding classes to it
         let homeLink = document.createElement("a");
         homeLink.classList.add("nav-link", "active");
         homeLink.setAttribute("aria-current", "page");
         homeLink.href = "./";
         homeLink.innerHTML = '<i class="fa-solid fa-landmark"></i>Home';
         home.appendChild(homeLink);
-      
+    
+        // Creating a list item element and adding classes to it
         let projects = document.createElement("li");
         projects.classList.add("nav-item");
         navList.appendChild(projects);
-      
+    
+        // Creating a link element and adding classes to it
         let projectsLink = document.createElement("a");
         projectsLink.id = "projects-link";
         projectsLink.classList.add("nav-link", "active");
         projectsLink.href = "./projects.html";
         projectsLink.innerHTML = '<i class="fa-solid fa-cart-shopping"></i>Projects';
         projects.appendChild(projectsLink);
-      
+    
+        // Creating a list item element and adding classes to it
         let services = document.createElement("li");
         services.classList.add("nav-item");
         navList.appendChild(services);
-      
-        let servicesLink = document.createElement("a");
-        servicesLink.classList.add("nav-link", "active");
-        servicesLink.href = "./services.html";
-        servicesLink.innerHTML = '<i class="fa-sharp fa-solid fa-bell-concierge"></i>Services';
-        services.appendChild(servicesLink);
-      
+        
         let contact = document.createElement("li");
         contact.classList.add("nav-item");
         navList.appendChild(contact);
@@ -136,6 +158,7 @@ function changeProductsToProjects(linkId, newHref) {
         
         return nav;
       }
+      //Function to run elements of the contact form
       function contactForm(){
         document.getElementById("submitButton").addEventListener("click", function(event) {
           event.preventDefault();
@@ -158,16 +181,12 @@ function changeProductsToProjects(linkId, newHref) {
    
     
     
-    // Document Ready Event
+    
+    
+      // Document Ready Event
     document.addEventListener("DOMContentLoaded", function() {
         
         changeProductsToProjects("products-link", "./projects.html");
-         
-        
-        
-        
-    
-    
     });
     document.addEventListener("DOMContentLoaded", function() {
         addHumanResourcesLink();
