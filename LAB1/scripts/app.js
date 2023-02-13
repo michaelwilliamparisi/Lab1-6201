@@ -24,13 +24,29 @@ function changeProductsToProjects(linkId, newHref) {
       
       contactLink.after(hr);
     }
+    function setProjectText() {
+        document.querySelector("#p1").textContent = "Project 1";
+        document.querySelector("#p1-desc").textContent = "This first project is based on a code camp project where you have to create a rpg user interface using JavaScript!";
+      
+        document.querySelector("#p2").textContent = "Project 2";
+        document.querySelector("#p2-desc").textContent = "This second project is based around making a flappy bird like game using scratch.";
+      
+        document.querySelector("#p3").textContent = "Project 3";
+        document.querySelector("#p3-desc").textContent = "Finally the third project is the website you're currently viewing on this page. Here is Michael doing his part working diligently.";
+      }
     function addTextForHome()
     {
-        let textContainer = document.querySelector("#HomeP");
-        let text = "This is the Home Page for Michael and Ben's Lab 1"
-        textContainer.textContent = text;
-    }
+        let textContainer1 = document.querySelector("#Welcome");
+        let text1 = "Welcome to our Website!"
+        textContainer1.textContent = text1; 
+        let textContainer2 = document.querySelector("#HomeP");
+        let text2 = "This is the Home Page for Michael and Ben's Lab 1"
+        textContainer2.textContent = text2;
 
+        
+    }
+    
+   
     // Function to create a bottom navigation bar
     function createBottomNavBar() {
         let nav = document.createElement("nav");
@@ -105,7 +121,7 @@ function changeProductsToProjects(linkId, newHref) {
         let hrLink = document.createElement("a");
         hrLink.classList.add("nav-link");
         hrLink.href = "./hr.html";
-        hrLink.innerHTML = '<i class="fa-solid fa-users"></i>Human Resources';
+        hrLink.innerHTML = '<i class="fa-solid fa-people-carry"></i>Human Resources';
         hr.appendChild(hrLink);
 
         let about = document.createElement("li");
@@ -115,44 +131,55 @@ function changeProductsToProjects(linkId, newHref) {
         let aboutLink = document.createElement("a");
         aboutLink.classList.add("nav-link");
         aboutLink.href = "./aboutus.html";
-        aboutLink.innerHTML = '<i class="fa-solid fa-bicycle"></i>About Us';
+        aboutLink.innerHTML = '<i class="fa-solid fa-child-combatant"></i>About Us';
         about.appendChild(aboutLink);
         
         return nav;
       }
-      function contactForm()
-      {
-      document.getElementById("submitButton").addEventListener("click", function(event) {
-        event.preventDefault();
-      
-        let formData = {
-          name: document.getElementById("fullName").value,
-          contactNumber: document.getElementById("contactNumber").value,
-          emailAddress: document.getElementById("emailAddress").value,
-          comments: document.querySelector("textarea").value,
-          subscribe: document.getElementById("subscribeCheckbox").checked
-        };
-      
-        console.log(formData);
-      
-        setTimeout(function() {
-          window.location.href = "./index.html";
-        }, 3000);
-      });
-    }
-  
+      function contactForm(){
+        document.getElementById("submitButton").addEventListener("click", function(event) {
+          event.preventDefault();
+        
+          let formData = {
+            name: document.getElementById("fullName").value,
+            contactNumber: document.getElementById("contactNumber").value,
+            emailAddress: document.getElementById("emailAddress").value,
+            comments: document.querySelector("textarea").value,
+            subscribe: document.getElementById("subscribeCheckbox").checked
+          };
+        
+          console.log(formData);
+        
+          setTimeout(function() {
+            window.location.href = "./index.html";
+          }, 3000);
+        });
+      }
+   
     
     
     // Document Ready Event
     document.addEventListener("DOMContentLoaded", function() {
-    addHumanResourcesLink();    
-    let bottomNav = createBottomNavBar();
-    document.body.appendChild(bottomNav);
-    addTextForHome();
-    contactForm();
-    changeProductsToProjects("products-link", "./projects.html");
-    addBottomNavbar();
+        
+        changeProductsToProjects("products-link", "./projects.html");
+        addHumanResourcesLink();    
+        
+        
+        
     
-    // Add event listener for the form submit
-    document.querySelector("#contact-form").addEventListener("submit", handleFormSubmit);
+    
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+        let bottomNav = createBottomNavBar();
+        document.body.appendChild(bottomNav);
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+        contactForm();
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+        addTextForHome();
+    });
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        setProjectText();
     });
