@@ -288,3 +288,7 @@ header img {
   font-size: 0.8rem;
   color: #333;
 }
+p {
+  max-width: 500px; 
+  margin: 0 auto; 
+}

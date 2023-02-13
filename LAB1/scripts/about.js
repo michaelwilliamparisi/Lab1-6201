@@ -8,7 +8,7 @@
         document.getElementById("h3").innerHTML = "My name is Michael Parisi and I am currently in my second year fourth semester of Computer programming and analysis at Durham College. </br> Apart from coding and going to school, I enjoy spending time with friends and family. I have a passion for working with cars and I enjoy tampering and playing around with my car. ";
         document.getElementById("mike").innerHTML = "Michael Parisi";
         document.getElementById("ben").innerHTML = "Benjamin Walsh";
-        document.getElementById("p2").innerHTML = "My name is Ben and I like penuts ";        
+        document.getElementById("p2").innerHTML = "My name is Ben and I like peanuts ";        
     }
 
     // Disaplying the buttons to our linked in pages.
