@@ -146,6 +146,17 @@ function createBottomNavBar() {
         hrLink.innerHTML = '<i class="fa-solid fa-people-carry"></i>Human Resources';
         hr.appendChild(hrLink);
 
+        // Creating the bottom registration nav bar link
+        let rs = document.createElement("li");
+        rs.classList.add("nav-item");
+        navList.appendChild(rs);
+
+        let rsLink = document.createElement("a");
+        rsLink.classList.add("nav-link");
+        rsLink.href = "./register.html";
+        rsLink.innerHTML = '<i class="fa-sharp fa-solid fa-id-card"></i>Registration';
+        hr.appendChild(rsLink);
+
         let about = document.createElement("li");
         about.classList.add("nav-item");
         navList.appendChild(about);
@@ -205,3 +216,91 @@ function createBottomNavBar() {
     document.addEventListener("DOMContentLoaded", function() {
         setProjectText();
     });
+
+
+function validateForm() {
+    let x = document.forms["myForm"]["username"].value;
+    let y = document.forms["myForm"]["password"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    } else {
+        console.log(`Username: ${ x } \n Password: ${ y }`)
+        userDisplay.textContent = x;
+        passDisplay.textContent = y;
+        return false;
+    }
+}
+
+
+
+function TestfirstName(){
+    let messageArea = $('#messageArea').hide()
+
+    let firstNamePattern = /^([A-Z][a-z]{1,25})*$/g
+
+    $('#firstName').on("blur", function(){
+        $(this).trigger("focus").trigger("select")
+
+        if(!firstNamePattern.test(firstNameText)){
+            messageArea.addClass("alert alert-danger")
+            messageArea.text("Please enter a valid first name which means a capitalized first letter.")
+
+            messageArea.show()
+
+        }else {
+            messageArea.removeAttr("class")
+            messageArea.hide()
+        }
+
+        
+    })
+
+}
+
+function DisplayContacts() {
+    console.log("Registration Page")
+
+
+
+    TestfirstName()
+
+
+    let submitButton = document.getElementById("submitButton")
+    
+
+    //Local Storage
+    /*localStorage.setItem("Random Variable", "Random variable for testing and demonstration")
+    console.log(localStorage.getItem("Random Variable"))
+    localStorage.removeItem("Random Variable")*/
+
+    //console.log("Contacts Page")
+
+
+    submitButton.addEventListener("click", function () {
+        //event.preventDefault
+        if (submitButton.click()) {
+            //if the user subscribes store the contact in local storage
+            let contact = new core.Contact(firstName.value, lastName.value, emailAddress.value)
+            if (contact.serialize()) {
+                let key = contact.Name.substring(0, 1) + Date.now()
+                localStorage.setItem(key, contact.serialize())
+            }
+        }
+    })
+}
+
+// function RegistrationFormValidate() {
+// let firstNamePattern = /^([A-Z][a-z]{1,25})*$/g
+// let lastNamePattern = /^([A-Z][a-z]{1,25})*$/g
+// let emailAddressPattern = /^[\w-\.]+@([\w-]+\.)+[\w-][\D]{2,10}$/g
+
+
+
+
+// ValidateInput("firstName", firstNamePattern, "Please enter a valid first name which means a capitalized first letter.")
+// ValidateInput("lastName", lastNamePattern, "Please enter a valid last name which means a capitalized first letter.")
+// ValidateInput("emailAddress", emailAddressPattern, "Please enter a valid email address")
+
+
+//}
