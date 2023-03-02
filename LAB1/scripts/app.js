@@ -125,6 +125,26 @@ function createBottomNavBar() {
         let services = document.createElement("li");
         services.classList.add("nav-item");
         navList.appendChild(services);
+
+        let rs = document.createElement("li");
+        rs.classList.add("nav-item");
+        navList.appendChild(rs);
+
+        let rsLink = document.createElement("a");
+        rsLink.classList.add("nav-link");
+        rsLink.href = "./register.html";
+        rsLink.innerHTML = '<i class="fa-sharp fa-solid fa-id-card"></i>Registration';
+        rs.appendChild(rsLink);
+
+        let log = document.createElement("li");
+        log.classList.add("nav-item");
+        navList.appendChild(log);
+
+        let logLink = document.createElement("a");
+        logLink.classList.add("nav-link");
+        logLink.href = "./login.html";
+        logLink.innerHTML = '<i class="fa-solid fa-user"></i>Login';
+        log.appendChild(logLink);
         
         let contact = document.createElement("li");
         contact.classList.add("nav-item");
@@ -147,15 +167,7 @@ function createBottomNavBar() {
         hr.appendChild(hrLink);
 
         // Creating the bottom registration nav bar link
-        let rs = document.createElement("li");
-        rs.classList.add("nav-item");
-        navList.appendChild(rs);
-
-        let rsLink = document.createElement("a");
-        rsLink.classList.add("nav-link");
-        rsLink.href = "./register.html";
-        rsLink.innerHTML = '<i class="fa-sharp fa-solid fa-id-card"></i>Registration';
-        hr.appendChild(rsLink);
+       
 
         let about = document.createElement("li");
         about.classList.add("nav-item");
@@ -189,7 +201,7 @@ function createBottomNavBar() {
           }, 3000);
         });
       }
-   
+ 
     
     
     
@@ -289,6 +301,7 @@ function DisplayContacts() {
         }
     })
 }
+
 
 // function RegistrationFormValidate() {
 // let firstNamePattern = /^([A-Z][a-z]{1,25})*$/g
